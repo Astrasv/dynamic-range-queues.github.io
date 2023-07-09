@@ -1,0 +1,68 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Stack Visuvalizer</title>
+    </head>
+    <body>
+        <h1 id="main_head">Dynamic Range Queue</h1>
+        <section class="main">
+            <div class="events" id="events">
+                <div class="step">
+                    <h1 class="stepno" class="step1">Step 1</h1>
+                </div>
+                <div class="op0">
+                    <a onclick="totalNumberofQs()" id="totalqueue">Fix Queue Count</a>
+                    <input type="number" id="totalqueueval"> 
+                </div>
+            </div>
+            
+            <div class="stack">
+
+                <ul>
+                    <li class="elem" style="--i:1;--clr:#777"><a href="#" id="elem1"><span>0</span>None</a></li>
+                    <li class="elem" style="--i:2;--clr:#777"><a href="#" id="elem2"><span>1</span>None</a></li>
+                    <li class="elem" style="--i:3;--clr:#777"><a href="#" id="elem3"><span>2</span>None</a></li>
+                    <li class="elem" style="--i:4;--clr:#777"><a href="#" id="elem4"><span>3</span>None</a></li>
+                    <li class="elem" style="--i:5;--clr:#777"><a href="#" id="elem5"><span>4</span>None</a></li>
+                    <li class="elem" style="--i:6;--clr:#777"><a href="#" id="elem6"><span>5</span>None</a></li>
+                    <li class="elem" style="--i:7;--clr:#777"><a href="#" id="elem7"><span>6</span>None</a></li>
+                    <li class="elem" style="--i:8;--clr:#777"><a href="#" id="elem8"><span>7</span>None</a></li>
+                    <li class="elem" style="--i:9;--clr:#777"><a href="#" id="elem9"><span>8</span>None</a></li>
+                    <li class="elem" style="--i:10;--clr:#777"><a href="#" id="elem10"><span>9</span>None</a></li>
+                </ul>
+                
+                <ul>
+                    <h1 class="stepno res">Result</h1>
+                    <li class="elem" style="--i:11;--clr:#777"><a href="#" id="elem11"><span>10</span>None</a></li>
+                    <li class="elem" style="--i:12;--clr:#777"><a href="#" id="elem12"><span>11</span>None</a></li>
+                    <li class="elem" style="--i:13;--clr:#777"><a href="#" id="elem13"><span>12</span>None</a></li>
+                    <li class="elem" style="--i:14;--clr:#777"><a href="#" id="elem14"><span>13</span>None</a></li>
+                    <li class="elem" style="--i:15;--clr:#777"><a href="#" id="elem15"><span>14</span>None</a></li>
+                    <li class="elem" style="--i:16;--clr:#777"><a href="#" id="elem16"><span>15</span>None</a></li>
+                    <li class="elem" style="--i:17;--clr:#777"><a href="#" id="elem17"><span>16</span>None</a></li>
+                    <li class="elem" style="--i:18;--clr:#777"><a href="#" id="elem18"><span>17</span>None</a></li>
+                    <li class="elem" style="--i:19;--clr:#777"><a href="#" id="elem19"><span>18</span>None</a></li>
+                    <li class="elem" style="--i:20;--clr:#777"><a href="#" id="elem20"><span>19</span>None</a></li>
+                </ul>
+                
+    
+            </div>
+            <div class="operations">
+                <h1 class="stepno step2">Step 2</h1>
+                <div class="op1">
+                    <a onclick="" id="queuenum">Queue Number</a><input type="number" id="queuenoval" required> 
+                </div>
+                <div class="op2">
+                    <a onclick="enqueueMain()" id="enqueuesub">Enqueue</a> <input type="number" id="elemval"> 
+                </div>
+                <a onclick="dequeueMain()" id="dequeuesub">Dequeue</a>
+            </div>
+        </section>
+    </body>
+
+    <script src="js/scripts.js"></script>
+    </html>

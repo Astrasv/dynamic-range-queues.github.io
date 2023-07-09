@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*Base color pallet*/
+:root{
+    /* Main colour pallet*/
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --third-bg-color: #282323;
+    --text-color: #fff;
+    --main-color: #0ef;
+    --accent-color: #069bf8;
+
+    /*Evnets color pallet*/
+    --push-color: #008e40;
+    --pop-color: #f71c1c;
+    --pointer-color: #faad06;
+    --top-color: #00c6fd;
+    --queuenum-color: #0decd9;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url("asset/mainbg.png");
+    color: var(--text-color);
+}
+section{
+    min-height: 100vh;
+    padding:10rem 9% 2rem;
+
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+}
+
+#main_head{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size:4rem;
+    background-image: url("asset/topbg.jpeg");
+    padding: 1rem;
+}
+
+.events{
+    background-color: var(--second-bg-color);
+    border-radius: 3.2rem;
+    padding: 1rem;
+    width: 30%;
+}
+
+.stepno{
+    text-align: center;
+    font-size: 3.2rem;
+    background-color: var(--accent-color);
+    width: 100%;
+    border-radius: 2rem;
+    margin-bottom:2rem ;
+    transition: 200ms ease;
+}
+
+.stepno:hover{
+    font-size: 4rem;
+    box-shadow: 0 0 50px var(--accent-color);
+}
+
+ul .stepno{
+    margin-bottom: 5rem;
+}
+
+.step2{
+    background-color: #9a00e1;
+}
+.res{
+    background-color: #008e40;
+}
+
+.nums{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.queuenuminp{
+    margin: 2px;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+.queuenuminp:hover{
+    background-color: var(--accent-color);
+    box-shadow: 0 0 50px var(--accent-color);
+}
+
+.sub_event{
+    height:17vh;
+    margin: 1rem;
+    border-radius: 3.2rem ;
+    background-color: var(--bg-color);
+    border: 3.2rem;
+    padding:1rem;
+    font-size: 2rem;
+    text-align: center;
+    transition: 200ms ease;
+}
+
+#push:hover{
+    background-color: var(--push-color);
+}
+#pop:hover{
+    background-color: var(--pop-color);
+}
+#pointer:hover{
+    background-color: var(--pointer-color);
+}
+#top:hover{
+    background-color: var(--top-color);
+}
+
+
+ul{
+    position: relative;
+    transform: skewY(-15deg);
+}
+
+ul li{
+    position: relative;
+    list-style: none;
+    width: 140px;
+    background: var(--clr);
+    padding: 15px;
+    transition: 0.5s;
+    z-index: calc(10 - (1 * var(--i)));
+}
+
+ul li:hover{
+    transform: translateX(-50px);
+    background: var(--main-color);
+}
+
+ul li:before{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: var(--clr);
+    filter: brightness(0.7);
+    transform-origin: right;
+    transform: skewY(45deg)
+}
+
+ul li:hover::before{
+    background: var(--accent-color);
+    filter: brightness(0.7);
+}
+
+.elem::after{
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #3e3f46;
+    filter: brightness(0.9);
+    transform-origin: bottom;
+    transform: skewX(45deg);
+}
+
+.elem:hover::after{
+    background: var(--accent-color);
+    filter: brightness(0.9);
+}
+
+.elem a{
+    text-decoration: none;
+    color: #000;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.elem:hover a{
+    color: rgb(0, 155, 93);
+    font-weight: bold;
+    font-size: 200%;
+
+}
+.hover-effect{
+    color: rgb(0, 155, 93);
+    font-weight: bold;
+    font-size: 200%;
+    background-color: var(--main-color);
+}
+
+.elem:last-child::after{
+    box-shadow: -120px 120px 20px rgba(0, 0,0,0.25);
+}
+
+.elem span{
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    color: #000;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.25em;
+}
+
+.elem:hover span{
+    color: var(--bg-color);
+}
+
+
+
+.operations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--second-bg-color);
+    padding: 3.2rem;
+    border-radius: 2rem;
+}
+
+.op0,.op1,.op2{
+    background-color: var(--second-bg-color);
+    padding: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+#dequeuesub{
+    cursor: pointer;
+}
+
+
+.operations input,.events input{
+    display: inline;
+    width: 10vw;
+    font-size: 3.2rem;
+    text-align: center;
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    font-weight: bold;
+    height: 10vh;
+    width: 5vw;
+    border-radius: 100%;
+    margin-top: 1rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.operations a,.events a {
+    display: inline;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 3.2rem;
+    border-radius: 2rem;
+    transition: 200ms ease;
+}
+
+.events input,.events a{
+    display: block;
+    margin: 0 auto;
+}
+
+
+#enqueuesub { 
+    margin-right: 3.2rem;
+    background-color: var(--push-color); 
+}
+#dequeuesub { background-color: var(--pop-color); }
+#totalqueue {
+    margin-right: 3.2rem;
+    margin-bottom: 1rem;
+    background-color: var(--pointer-color); 
+}
+#queuenum { 
+    margin-right:3.2rem ;
+    background-color: var(--top-color); 
+}
+
+#enqueuesub:hover,#dequeuesub:hover,#totalqueue:hover,#queuenum:hover{
+    box-shadow: 0 0 50px var(--main-color);
+
+}
+
+
+.stack{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
